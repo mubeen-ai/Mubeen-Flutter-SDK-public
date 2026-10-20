@@ -15,7 +15,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'mubeen_flutter'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'Flutter plugin for the Mubeen device-intelligence SDKs.'
   s.description      = <<-DESC
 Flutter wrapper around MubeenDeviceSDK 2.0 (iOS) — persistent UUIDv7 device id plus

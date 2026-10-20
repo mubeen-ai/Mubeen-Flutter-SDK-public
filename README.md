@@ -17,7 +17,7 @@ dependencies:
   mubeen_flutter:
     git:
       url: https://github.com/mubeen-ai/Mubeen-Flutter-SDK-public.git
-      ref: v0.1.5
+      ref: v0.1.6
 ```
 
 This package is not published to pub.dev. Pin the exact tag: `flutter pub get` then fetches
@@ -79,13 +79,12 @@ and a release build does not. On Android, `warning` and below still allow a few 
 lines from the native SDK's own logger (see "Known limitations" below); none of them carries
 your key, but a truncated device id can still appear.
 
-### Key rotation
+### Changing your API key
 
-If a key needs to be rotated (leaked, employee offboarding, or routine hygiene), ship the
-new key in an app update and keep both the old and new key active in the dashboard until
-adoption has caught up with your release - old app versions in the field keep sending the
-old key until they update. Only revoke the old key once you are confident nothing still in
-use depends on it. If a key has leaked, also contact engineering@mubeen.ai.
+Old app versions keep sending the key they were built with until users update. When you
+switch keys (for example, moving region), ship the new key in an app update and keep the
+old one active in the dashboard until adoption has caught up; revoking it earlier silently
+stops fingerprints from those installs.
 
 ### Release builds (R8)
 
@@ -452,6 +451,7 @@ as personal data for label purposes, not as anonymized. If you turn on
 
 | Plugin version | Android (`ai.mubeen:deviceintel-lib`) | iOS (`MubeenDeviceSDK`) |
 |---|---|---|
+| 0.1.6 | 1.7.3 | 2.0.0 |
 | 0.1.5 | 1.7.3 | 2.0.0 |
 | 0.1.4 | 1.7.3 | 2.0.0 |
 | 0.1.3 | 1.7.3 | 2.0.0 |

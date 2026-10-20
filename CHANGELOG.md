@@ -1,3 +1,11 @@
+## 0.1.6
+
+Released 2026-10-21.
+
+- README: "Key rotation" is replaced by "Changing your API key". The key is publishable, so
+  the section now covers only what matters when you switch keys: old app versions keep
+  sending the old one. No code changes.
+
 ## 0.1.5
 
 Released 2026-10-21.

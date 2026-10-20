@@ -1,6 +1,6 @@
 name: mubeen_flutter
 description: "Mubeen device intelligence for Flutter: device fingerprinting and persistent device identity on Android and iOS."
-version: 0.1.5
+version: 0.1.6
 
 # This package is distributed as a git dependency, not through pub.dev. `publish_to: none` makes
 # `dart pub publish` refuse, so it cannot reach pub.dev by accident.
