@@ -1,0 +1,15 @@
+mubeen_flutter
+Copyright (c) 2026 Mubeen AI. Licensed under the Mubeen SDK License (see LICENSE).
+
+Bundled in this repository:
+
+- ios/Frameworks/MubeenDeviceSDK.xcframework - Mubeen AI. Covered by LICENSE.
+
+Resolved by your build at build time, not bundled here, and licensed by their owners under
+their own terms:
+
+- ai.mubeen:deviceintel-lib (Android) - Mubeen AI. See the license in its published POM
+  on Maven Central.
+- Its transitive dependencies, including OkHttp, Retrofit and kotlinx.coroutines -
+  Apache License 2.0.
+- Flutter and the Dart SDK - BSD 3-Clause License.

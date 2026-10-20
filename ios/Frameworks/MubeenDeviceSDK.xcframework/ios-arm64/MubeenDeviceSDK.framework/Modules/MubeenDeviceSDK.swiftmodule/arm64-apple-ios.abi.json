@@ -1,0 +1,3085 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "MubeenDeviceSDK",
+    "printedName": "MubeenDeviceSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeviceCheck",
+        "printedName": "DeviceCheck",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MubeenSDKDelegate",
+        "printedName": "MubeenSDKDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "mubeenSDKDidSendRequest",
+            "printedName": "mubeenSDKDidSendRequest(path:bodySize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15MubeenDeviceSDK0A11SDKDelegateP23mubeenSDKDidSendRequest4path8bodySizeySS_SitF",
+            "mangledName": "$s15MubeenDeviceSDK0A11SDKDelegateP23mubeenSDKDidSendRequest4path8bodySizeySS_SitF",
+            "moduleName": "MubeenDeviceSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : MubeenDeviceSDK.MubeenSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : MubeenDeviceSDK.MubeenSDKDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mubeenSDKDidReceiveResponse",
+            "printedName": "mubeenSDKDidReceiveResponse(path:statusCode:durationMs:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15MubeenDeviceSDK0A11SDKDelegateP27mubeenSDKDidReceiveResponse4path10statusCode10durationMsySS_S2itF",
+            "mangledName": "$s15MubeenDeviceSDK0A11SDKDelegateP27mubeenSDKDidReceiveResponse4path10statusCode10durationMsySS_S2itF",
+            "moduleName": "MubeenDeviceSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : MubeenDeviceSDK.MubeenSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : MubeenDeviceSDK.MubeenSDKDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15MubeenDeviceSDK0A11SDKDelegateP",
+        "mangledName": "$s15MubeenDeviceSDK0A11SDKDelegateP",
+        "moduleName": "MubeenDeviceSDK",
+        "genericSig": "<τ_0_0 : AnyObject, τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : AnyObject, Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MubeenSDKError",
+        "printedName": "MubeenSDKError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "notConfigured",
+            "printedName": "notConfigured",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenSDKError",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                    "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO13notConfiguredyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO13notConfiguredyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "configurationInvalid",
+            "printedName": "configurationInvalid",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO20configurationInvalidyACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO20configurationInvalidyACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "keychainError",
+            "printedName": "keychainError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO13keychainErroryACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO13keychainErroryACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "networkError",
+            "printedName": "networkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO12networkErroryACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO12networkErroryACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "serverError",
+            "printedName": "serverError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.Int, Swift.String?) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.String?) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(statusCode: Swift.Int, message: Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO11serverErroryACSi_SSSgtcACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO11serverErroryACSi_SSSgtcACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "signalCollectionFailed",
+            "printedName": "signalCollectionFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO22signalCollectionFailedyACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO22signalCollectionFailedyACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "killSwitchActive",
+            "printedName": "killSwitchActive",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenSDKError",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                    "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO16killSwitchActiveyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO16killSwitchActiveyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "internalError",
+            "printedName": "internalError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO13internalErroryACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO13internalErroryACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "identityInitializationFailed",
+            "printedName": "identityInitializationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO28identityInitializationFailedyACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO28identityInitializationFailedyACSScACmF",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "attestationUnsupported",
+            "printedName": "attestationUnsupported",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenSDKError",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                    "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO22attestationUnsupportedyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO22attestationUnsupportedyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "attestationFailed",
+            "printedName": "attestationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO17attestationFailedyACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO17attestationFailedyACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "assertionFailed",
+            "printedName": "assertionFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenSDKError.Type) -> (Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> MubeenDeviceSDK.MubeenSDKError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenSDKError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKError",
+                        "printedName": "MubeenDeviceSDK.MubeenSDKError",
+                        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO15assertionFailedyACSScACmF",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO15assertionFailedyACSScACmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorCode",
+            "printedName": "errorCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A8SDKErrorO9errorCodeSSvp",
+            "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO9errorCodeSSvp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A8SDKErrorO9errorCodeSSvg",
+                "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO9errorCodeSSvg",
+                "moduleName": "MubeenDeviceSDK",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15MubeenDeviceSDK0A8SDKErrorO",
+        "mangledName": "$s15MubeenDeviceSDK0A8SDKErrorO",
+        "moduleName": "MubeenDeviceSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MubeenConfig",
+        "printedName": "MubeenConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "apiKey",
+            "printedName": "apiKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV6apiKeySSvp",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV6apiKeySSvp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV6apiKeySSvg",
+                "mangledName": "$s15MubeenDeviceSDK0A6ConfigV6apiKeySSvg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "endpoint",
+            "printedName": "endpoint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV8endpoint10Foundation3URLVvp",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV8endpoint10Foundation3URLVvp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV8endpoint10Foundation3URLVvg",
+                "mangledName": "$s15MubeenDeviceSDK0A6ConfigV8endpoint10Foundation3URLVvg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "environment",
+            "printedName": "environment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MubeenEnvironment",
+                "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV11environmentAA0A11EnvironmentOvp",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV11environmentAA0A11EnvironmentOvp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenEnvironment",
+                    "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                    "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV11environmentAA0A11EnvironmentOvg",
+                "mangledName": "$s15MubeenDeviceSDK0A6ConfigV11environmentAA0A11EnvironmentOvg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableJailbreakChecks",
+            "printedName": "enableJailbreakChecks",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV21enableJailbreakChecksSbvp",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV21enableJailbreakChecksSbvp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV21enableJailbreakChecksSbvg",
+                "mangledName": "$s15MubeenDeviceSDK0A6ConfigV21enableJailbreakChecksSbvg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableBehavioralSignals",
+            "printedName": "enableBehavioralSignals",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV23enableBehavioralSignalsSbvp",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV23enableBehavioralSignalsSbvp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV23enableBehavioralSignalsSbvg",
+                "mangledName": "$s15MubeenDeviceSDK0A6ConfigV23enableBehavioralSignalsSbvg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "logLevel",
+            "printedName": "logLevel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "MubeenDeviceSDK.LogLevel",
+                "usr": "s:15MubeenDeviceSDK8LogLevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV8logLevelAA03LogF0Ovp",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV8logLevelAA03LogF0Ovp",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV8logLevelAA03LogF0Ovg",
+                "mangledName": "$s15MubeenDeviceSDK0A6ConfigV8logLevelAA03LogF0Ovg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(apiKey:endpoint:environment:enableJailbreakChecks:enableBehavioralSignals:logLevel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MubeenConfig",
+                "printedName": "MubeenDeviceSDK.MubeenConfig",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MubeenEnvironment",
+                "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                "hasDefaultArg": true,
+                "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "MubeenDeviceSDK.LogLevel",
+                "hasDefaultArg": true,
+                "usr": "s:15MubeenDeviceSDK8LogLevelO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15MubeenDeviceSDK0A6ConfigV6apiKey8endpoint11environment21enableJailbreakChecks0I17BehavioralSignals8logLevelACSS_10Foundation3URLVAA0A11EnvironmentOS2bAA03LogO0Otcfc",
+            "mangledName": "$s15MubeenDeviceSDK0A6ConfigV6apiKey8endpoint11environment21enableJailbreakChecks0I17BehavioralSignals8logLevelACSS_10Foundation3URLVAA0A11EnvironmentOS2bAA03LogO0Otcfc",
+            "moduleName": "MubeenDeviceSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15MubeenDeviceSDK0A6ConfigV",
+        "mangledName": "$s15MubeenDeviceSDK0A6ConfigV",
+        "moduleName": "MubeenDeviceSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MubeenEnvironment",
+        "printedName": "MubeenEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenEnvironment.Type) -> MubeenDeviceSDK.MubeenEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenEnvironment",
+                    "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                    "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenEnvironment",
+                        "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                        "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A11EnvironmentO10productionyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK0A11EnvironmentO10productionyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "sandbox",
+            "printedName": "sandbox",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.MubeenEnvironment.Type) -> MubeenDeviceSDK.MubeenEnvironment",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenEnvironment",
+                    "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                    "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.MubeenEnvironment.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenEnvironment",
+                        "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                        "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK0A11EnvironmentO7sandboxyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK0A11EnvironmentO7sandboxyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MubeenDeviceSDK.MubeenEnvironment?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenEnvironment",
+                    "printedName": "MubeenDeviceSDK.MubeenEnvironment",
+                    "usr": "s:15MubeenDeviceSDK0A11EnvironmentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15MubeenDeviceSDK0A11EnvironmentO8rawValueACSgSS_tcfc",
+            "mangledName": "$s15MubeenDeviceSDK0A11EnvironmentO8rawValueACSgSS_tcfc",
+            "moduleName": "MubeenDeviceSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A11EnvironmentO8rawValueSSvp",
+            "mangledName": "$s15MubeenDeviceSDK0A11EnvironmentO8rawValueSSvp",
+            "moduleName": "MubeenDeviceSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A11EnvironmentO8rawValueSSvg",
+                "mangledName": "$s15MubeenDeviceSDK0A11EnvironmentO8rawValueSSvg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15MubeenDeviceSDK0A11EnvironmentO",
+        "mangledName": "$s15MubeenDeviceSDK0A11EnvironmentO",
+        "moduleName": "MubeenDeviceSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LogLevel",
+        "printedName": "LogLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "verbose",
+            "printedName": "verbose",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.LogLevel.Type) -> MubeenDeviceSDK.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "MubeenDeviceSDK.LogLevel",
+                        "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO7verboseyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO7verboseyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "debug",
+            "printedName": "debug",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.LogLevel.Type) -> MubeenDeviceSDK.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "MubeenDeviceSDK.LogLevel",
+                        "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO5debugyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO5debugyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "info",
+            "printedName": "info",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.LogLevel.Type) -> MubeenDeviceSDK.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "MubeenDeviceSDK.LogLevel",
+                        "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO4infoyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO4infoyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "warning",
+            "printedName": "warning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.LogLevel.Type) -> MubeenDeviceSDK.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "MubeenDeviceSDK.LogLevel",
+                        "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO7warningyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO7warningyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.LogLevel.Type) -> MubeenDeviceSDK.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "MubeenDeviceSDK.LogLevel",
+                        "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO5erroryA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO5erroryA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MubeenDeviceSDK.LogLevel.Type) -> MubeenDeviceSDK.LogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MubeenDeviceSDK.LogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "MubeenDeviceSDK.LogLevel",
+                        "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO4noneyA2CmF",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO4noneyA2CmF",
+            "moduleName": "MubeenDeviceSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "<",
+            "printedName": "<(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "MubeenDeviceSDK.LogLevel",
+                "usr": "s:15MubeenDeviceSDK8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "MubeenDeviceSDK.LogLevel",
+                "usr": "s:15MubeenDeviceSDK8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO1loiySbAC_ACtFZ",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO1loiySbAC_ACtFZ",
+            "moduleName": "MubeenDeviceSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MubeenDeviceSDK.LogLevel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "MubeenDeviceSDK.LogLevel",
+                    "usr": "s:15MubeenDeviceSDK8LogLevelO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO8rawValueACSgSi_tcfc",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO8rawValueACSgSi_tcfc",
+            "moduleName": "MubeenDeviceSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK8LogLevelO8rawValueSivp",
+            "mangledName": "$s15MubeenDeviceSDK8LogLevelO8rawValueSivp",
+            "moduleName": "MubeenDeviceSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK8LogLevelO8rawValueSivg",
+                "mangledName": "$s15MubeenDeviceSDK8LogLevelO8rawValueSivg",
+                "moduleName": "MubeenDeviceSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15MubeenDeviceSDK8LogLevelO",
+        "mangledName": "$s15MubeenDeviceSDK8LogLevelO",
+        "moduleName": "MubeenDeviceSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Mubeen",
+        "printedName": "Mubeen",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any MubeenDeviceSDK.MubeenSDKDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MubeenSDKDelegate",
+                    "printedName": "any MubeenDeviceSDK.MubeenSDKDelegate",
+                    "usr": "s:15MubeenDeviceSDK0A11SDKDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvpZ",
+            "mangledName": "$s15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvpZ",
+            "moduleName": "MubeenDeviceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any MubeenDeviceSDK.MubeenSDKDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKDelegate",
+                        "printedName": "any MubeenDeviceSDK.MubeenSDKDelegate",
+                        "usr": "s:15MubeenDeviceSDK0A11SDKDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvgZ",
+                "mangledName": "$s15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvgZ",
+                "moduleName": "MubeenDeviceSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any MubeenDeviceSDK.MubeenSDKDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MubeenSDKDelegate",
+                        "printedName": "any MubeenDeviceSDK.MubeenSDKDelegate",
+                        "usr": "s:15MubeenDeviceSDK0A11SDKDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvsZ",
+                "mangledName": "$s15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvsZ",
+                "moduleName": "MubeenDeviceSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvMZ",
+                "mangledName": "$s15MubeenDeviceSDK0A0C8delegateAA0A11SDKDelegate_pSgvMZ",
+                "moduleName": "MubeenDeviceSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MubeenConfig",
+                "printedName": "MubeenDeviceSDK.MubeenConfig",
+                "usr": "s:15MubeenDeviceSDK0A6ConfigV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15MubeenDeviceSDK0A0C9configureyyAA0A6ConfigVYaKFZ",
+            "mangledName": "$s15MubeenDeviceSDK0A0C9configureyyAA0A6ConfigVYaKFZ",
+            "moduleName": "MubeenDeviceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "deviceId",
+            "printedName": "deviceId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15MubeenDeviceSDK0A0C8deviceIdSSvpZ",
+            "mangledName": "$s15MubeenDeviceSDK0A0C8deviceIdSSvpZ",
+            "moduleName": "MubeenDeviceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15MubeenDeviceSDK0A0C8deviceIdSSvgZ",
+                "mangledName": "$s15MubeenDeviceSDK0A0C8deviceIdSSvgZ",
+                "moduleName": "MubeenDeviceSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "resetDeviceId",
+            "printedName": "resetDeviceId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15MubeenDeviceSDK0A0C05resetB2IdSSyFZ",
+            "mangledName": "$s15MubeenDeviceSDK0A0C05resetB2IdSSyFZ",
+            "moduleName": "MubeenDeviceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendFingerprint",
+            "printedName": "sendFingerprint(metadata:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15MubeenDeviceSDK0A0C15sendFingerprint8metadataySDyS2SGSg_tYaKFZ",
+            "mangledName": "$s15MubeenDeviceSDK0A0C15sendFingerprint8metadataySDyS2SGSg_tYaKFZ",
+            "moduleName": "MubeenDeviceSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15MubeenDeviceSDK0A0C",
+        "mangledName": "$s15MubeenDeviceSDK0A0C",
+        "moduleName": "MubeenDeviceSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "MubeenDeviceSDK"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/build\/dd-ios\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MubeenDeviceSDK\/IntermediateBuildFilesPath\/MubeenDeviceSDK.build\/Release-iphoneos\/MubeenDeviceSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 295,
+      "length": 33,
+      "value": "\"MubeenDeviceSDK_MubeenDeviceSDK\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/build\/dd-ios\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MubeenDeviceSDK\/IntermediateBuildFilesPath\/MubeenDeviceSDK.build\/Release-iphoneos\/MubeenDeviceSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "Array",
+      "offset": 975,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/build\/dd-ios\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MubeenDeviceSDK\/IntermediateBuildFilesPath\/MubeenDeviceSDK.build\/Release-iphoneos\/MubeenDeviceSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1502,
+      "length": 9,
+      "value": "\".bundle\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/build\/dd-ios\/Build\/Intermediates.noindex\/ArchiveIntermediates\/MubeenDeviceSDK\/IntermediateBuildFilesPath\/MubeenDeviceSDK.build\/Release-iphoneos\/MubeenDeviceSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1654,
+      "length": 61,
+      "value": "\"unable to find bundle named MubeenDeviceSDK_MubeenDeviceSDK\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Attestation\/AppAttestManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 519,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Identity\/DeviceIDStore.swift",
+      "kind": "StringLiteral",
+      "offset": 1204,
+      "length": 11,
+      "value": "\"device_id\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Identity\/IdentityManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 644,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Identity\/IdentityManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 691,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 3799,
+      "length": 16,
+      "value": "\"schema_version\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 3839,
+      "length": 10,
+      "value": "\"sdk_name\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 3876,
+      "length": 13,
+      "value": "\"sdk_version\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 3917,
+      "length": 14,
+      "value": "\"collected_at\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 3956,
+      "length": 11,
+      "value": "\"device_id\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4014,
+      "length": 11,
+      "value": "\"bundle_id\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4076,
+      "length": 12,
+      "value": "\"request_id\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4114,
+      "length": 12,
+      "value": "\"session_id\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4213,
+      "length": 18,
+      "value": "\"jailbreak_tamper\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4849,
+      "length": 31,
+      "value": "\"identifier_for_vendor_present\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4920,
+      "length": 28,
+      "value": "\"identifier_for_vendor_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 4986,
+      "length": 26,
+      "value": "\"local_install_created_at\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 5044,
+      "length": 19,
+      "value": "\"vendor_id_changed\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 5332,
+      "length": 22,
+      "value": "\"app_attest_supported\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 5391,
+      "length": 23,
+      "value": "\"devicecheck_available\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 5915,
+      "length": 15,
+      "value": "\"device_family\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 5953,
+      "length": 9,
+      "value": "\"os_name\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 5988,
+      "length": 12,
+      "value": "\"os_version\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6031,
+      "length": 17,
+      "value": "\"model_marketing\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6077,
+      "length": 15,
+      "value": "\"model_machine\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6120,
+      "length": 14,
+      "value": "\"is_simulator\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6165,
+      "length": 19,
+      "value": "\"is_low_power_mode\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6249,
+      "length": 21,
+      "value": "\"preferred_languages\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6487,
+      "length": 14,
+      "value": "\"width_points\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6530,
+      "length": 15,
+      "value": "\"height_points\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6897,
+      "length": 11,
+      "value": "\"bundle_id\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6938,
+      "length": 16,
+      "value": "\"bundle_version\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 6981,
+      "length": 13,
+      "value": "\"app_version\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7020,
+      "length": 12,
+      "value": "\"build_type\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7066,
+      "length": 21,
+      "value": "\"install_age_seconds\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7115,
+      "length": 15,
+      "value": "\"first_seen_at\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7157,
+      "length": 14,
+      "value": "\"last_seen_at\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7412,
+      "length": 17,
+      "value": "\"connection_type\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7458,
+      "length": 15,
+      "value": "\"vpn_suspected\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7505,
+      "length": 18,
+      "value": "\"proxy_configured\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 7992,
+      "length": 17,
+      "value": "\"jailbreak_score\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8037,
+      "length": 14,
+      "value": "\"tamper_score\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8084,
+      "length": 19,
+      "value": "\"debugger_detected\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8134,
+      "length": 17,
+      "value": "\"frida_suspected\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8185,
+      "length": 20,
+      "value": "\"sideload_suspected\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8246,
+      "length": 28,
+      "value": "\"restricted_write_succeeded\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8311,
+      "length": 24,
+      "value": "\"suspicious_paths_found\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8373,
+      "length": 25,
+      "value": "\"suspicious_dylibs_found\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8430,
+      "length": 18,
+      "value": "\"triggered_checks\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8761,
+      "length": 21,
+      "value": "\"session_event_count\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8824,
+      "length": 30,
+      "value": "\"foreground_session_length_ms\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8888,
+      "length": 21,
+      "value": "\"tap_cadence_summary\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 8947,
+      "length": 25,
+      "value": "\"navigation_pattern_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 9346,
+      "length": 17,
+      "value": "\"account_id_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 9396,
+      "length": 20,
+      "value": "\"payment_token_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 9442,
+      "length": 12,
+      "value": "\"email_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 9480,
+      "length": 12,
+      "value": "\"phone_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/Models.swift",
+      "kind": "StringLiteral",
+      "offset": 9527,
+      "length": 23,
+      "value": "\"merchant_user_id_hash\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 769,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 815,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1347,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1366,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1384,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1405,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1424,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1442,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenDeviceSDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 791,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Public\/MubeenDeviceSDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 837,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Session\/SessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 340,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Session\/SessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 378,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Session\/SessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 432,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Signals\/NetworkSignalCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 399,
+      "length": 28,
+      "value": "\"com.mubeen.network-monitor\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Signals\/SignalCollector.swift",
+      "kind": "Array",
+      "offset": 4810,
+      "length": 52,
+      "value": "[\"account_id\", \"payment_token_id\", \"email\", \"phone\"]"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Storage\/LocalCache.swift",
+      "kind": "StringLiteral",
+      "offset": 250,
+      "length": 17,
+      "value": "\"com.mubeen.sdk.\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Storage\/SecureStorage.swift",
+      "kind": "StringLiteral",
+      "offset": 249,
+      "length": 23,
+      "value": "\"com.mubeen.device-sdk\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 575,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 611,
+      "length": 24,
+      "value": "\"\/v1\/mobile\/fingerprint\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 6014,
+      "length": 13,
+      "value": "\"kill_switch\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 6065,
+      "length": 25,
+      "value": "\"enable_jailbreak_checks\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 6130,
+      "length": 27,
+      "value": "\"enable_behavioral_signals\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 6187,
+      "length": 17,
+      "value": "\"min_sdk_version\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/APIClient.swift",
+      "kind": "StringLiteral",
+      "offset": 6233,
+      "length": 15,
+      "value": "\"pinned_hashes\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/RetryQueue.swift",
+      "kind": "IntegerLiteral",
+      "offset": 404,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/RetryQueue.swift",
+      "kind": "FloatLiteral",
+      "offset": 449,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/RetryQueue.swift",
+      "kind": "BooleanLiteral",
+      "offset": 524,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Transport\/RetryQueue.swift",
+      "kind": "StringLiteral",
+      "offset": 1182,
+      "length": 30,
+      "value": "\"com.mubeen.sdk.retry-monitor\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Utilities\/BuildInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 61,
+      "length": 32,
+      "value": "\"mubeen-ios-device-intelligence\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Utilities\/BuildInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 122,
+      "length": 7,
+      "value": "\"2.0.0\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Utilities\/BuildInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 161,
+      "length": 7,
+      "value": "\"2.0.0\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Utilities\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 23,
+      "value": "\"com.mubeen.device-sdk\""
+    },
+    {
+      "filePath": "\/Users\/abdo\/Desktop\/MubeenDeviceSDK\/Sources\/MubeenDeviceSDK\/Utilities\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 11,
+      "value": "\"MubeenSDK\""
+    }
+  ]
+}

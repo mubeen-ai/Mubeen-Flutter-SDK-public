@@ -1,0 +1,58 @@
+Mubeen SDK License
+
+Copyright (c) 2026 Mubeen AI. All rights reserved.
+
+This license covers the mubeen_flutter plugin in this repository, including the bundled
+MubeenDeviceSDK binary under ios/Frameworks (together, the "SDK"). "Agreement" means your
+active agreement with Mubeen AI for the Mubeen service, including the Mubeen Terms of
+Service.
+
+1. Grant. While your Agreement is in effect, and subject to these terms, Mubeen AI grants
+   you a non-exclusive, non-transferable, non-sublicensable, royalty-free license to:
+   (a) use the SDK to develop, test and operate applications that access the Mubeen
+       service;
+   (b) reproduce and distribute the SDK in object form, solely as part of those
+       applications, to your end users;
+   (c) modify the plugin's source files (lib/, android/ and ios/ excluding
+       ios/Frameworks) solely as needed to integrate or maintain the SDK in those
+       applications; and
+   (d) copy the sample code in example/ and the code snippets in the documentation into
+       those applications without restriction.
+
+2. Restrictions. You may not:
+   (a) modify the MubeenDeviceSDK binary, or decompile, disassemble or reverse engineer
+       any part of the SDK, except to the extent applicable law expressly permits it
+       despite this restriction;
+   (b) circumvent, disable or interfere with the SDK's integrity, tamper-detection or
+       security checks, or alter the data it collects or transmits to misrepresent a
+       device;
+   (c) distribute the SDK on a standalone basis or in source form, or sublicense, sell,
+       rent or lease it;
+   (d) use the SDK to access any service other than the Mubeen service, or to build a
+       competing product or service; or
+   (e) remove or alter any proprietary notice in the SDK.
+
+3. Your applications. You are responsible for your applications' compliance with
+   applicable law and app store policies, including privacy disclosures and any end-user
+   consent required for the data the SDK collects.
+
+4. Third-party components. Components the SDK depends on are licensed by their owners
+   under their own terms, listed in NOTICE. Those terms, not this license, govern those
+   components.
+
+5. Termination. This license ends automatically when your Agreement ends or if you breach
+   these terms. You must then stop using the SDK and stop distributing it in new releases
+   of your applications. Copies already installed by end users before termination are not
+   affected.
+
+6. Disclaimer. Except as expressly stated in your Agreement, the SDK is provided "AS IS",
+   without warranty of any kind, express or implied, including warranties of
+   merchantability, fitness for a particular purpose and non-infringement.
+
+7. Limitation of liability. Except as expressly stated in your Agreement, Mubeen AI is not
+   liable for any indirect, incidental, special, consequential or punitive damages, or any
+   loss of profits, revenue or data, arising from the SDK or this license.
+
+8. Precedence. If these terms conflict with your Agreement, the Agreement controls.
+
+Contact engineering@mubeen.ai for licensing questions.

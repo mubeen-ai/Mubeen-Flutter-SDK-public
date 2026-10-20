@@ -1,0 +1,4 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Release self-test builds only (MUBEEN_E2E_SELFTEST_ENDPOINT set); see build.gradle.kts. -->
+    <application android:networkSecurityConfig="@xml/e2e_network_security_config" />
+</manifest>

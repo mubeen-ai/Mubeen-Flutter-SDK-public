@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required for fingerprint upload. Without it the SDK reports an UPLOAD_FAILURE naming
+         this exact permission (UploadManager.kt:232-242) instead of crashing. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Auto Backup rules are deliberately NOT declared here.
+
+        The SDK's device id lives in the SharedPreferences file MB_device_intel_secure_prefs and
+        only survives a reinstall when the host app's Auto Backup rules cover it (see the SDK
+        README, "Device ID persistence"). It is tempting to add
+
+            <application android:fullBackupContent="@xml/mb_full_backup_content" ... />
+
+        to this library manifest so it "just works". We do not, for two reasons:
+
+        1. Manifest merger conflict. A host app that already sets android:fullBackupContent or
+           android:dataExtractionRules would fail its build with a merger error, because two
+           different values for the same attribute cannot be merged. A plugin that breaks the
+           client's build on install is worse than a plugin that documents one line.
+
+        2. The rules are include-only, so pointing the host's attribute at our file would RESTRICT
+           backup to just the SDK prefs and silently exclude the app's own data.
+
+        The README carries both rule files verbatim, under "Auto Backup (Android)", and tells
+        integrators to copy the single <include> line into their own rules (or, if they have no
+        rules at all, to change nothing: the platform default backs up all shared prefs
+        already). They used to ship here as reference copies under res/xml/, which was a
+        mistake: a library's res/ merges into the client's resource table, so
+        @xml/mb_full_backup_content became a real, resolvable reference in their namespace -
+        making the exact one-liner reason 2 warns against not just tempting but easy.
+    -->
+
+</manifest>

@@ -1,0 +1,99 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name MubeenDeviceSDK -package-name mubeendevicesdk
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+import CryptoKit
+import DeviceCheck
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import MachO
+import Network
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+public protocol MubeenSDKDelegate : AnyObject, Swift.Sendable {
+  @_Concurrency.MainActor func mubeenSDKDidSendRequest(path: Swift.String, bodySize: Swift.Int)
+  @_Concurrency.MainActor func mubeenSDKDidReceiveResponse(path: Swift.String, statusCode: Swift.Int, durationMs: Swift.Int)
+}
+public enum MubeenSDKError : Swift.Error, Swift.Sendable {
+  case notConfigured
+  case configurationInvalid(Swift.String)
+  case keychainError(Swift.String)
+  case networkError(Swift.String)
+  case serverError(statusCode: Swift.Int, message: Swift.String?)
+  case signalCollectionFailed(Swift.String)
+  case killSwitchActive
+  case internalError(Swift.String)
+  case identityInitializationFailed(Swift.String)
+  case attestationUnsupported
+  case attestationFailed(Swift.String)
+  case assertionFailed(Swift.String)
+  public var errorCode: Swift.String {
+    get
+  }
+}
+public struct MubeenConfig : Swift.Sendable {
+  public let apiKey: Swift.String
+  public let endpoint: Foundation.URL
+  public let environment: MubeenDeviceSDK.MubeenEnvironment
+  public let enableJailbreakChecks: Swift.Bool
+  public let enableBehavioralSignals: Swift.Bool
+  public let logLevel: MubeenDeviceSDK.LogLevel
+  public init(apiKey: Swift.String, endpoint: Foundation.URL, environment: MubeenDeviceSDK.MubeenEnvironment = .production, enableJailbreakChecks: Swift.Bool = true, enableBehavioralSignals: Swift.Bool = false, logLevel: MubeenDeviceSDK.LogLevel = .warning)
+}
+public enum MubeenEnvironment : Swift.String, Swift.Sendable, Swift.Codable {
+  case production
+  case sandbox
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LogLevel : Swift.Int, Swift.Sendable, Swift.Comparable {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  case none
+  public static func < (lhs: MubeenDeviceSDK.LogLevel, rhs: MubeenDeviceSDK.LogLevel) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Mubeen : @unchecked Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static var delegate: (any MubeenDeviceSDK.MubeenSDKDelegate)? {
+    get
+    set
+  }
+  #endif
+  public static func configure(_ config: MubeenDeviceSDK.MubeenConfig) async throws
+  public static var deviceId: Swift.String {
+    get
+  }
+  @discardableResult
+  public static func resetDeviceId() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func sendFingerprint(metadata: [Swift.String : Swift.String]? = nil) async throws
+  #endif
+  @objc deinit
+}
+extension MubeenDeviceSDK.MubeenEnvironment : Swift.Equatable {}
+extension MubeenDeviceSDK.MubeenEnvironment : Swift.Hashable {}
+extension MubeenDeviceSDK.MubeenEnvironment : Swift.RawRepresentable {}
+extension MubeenDeviceSDK.LogLevel : Swift.Hashable {}
+extension MubeenDeviceSDK.LogLevel : Swift.RawRepresentable {}
