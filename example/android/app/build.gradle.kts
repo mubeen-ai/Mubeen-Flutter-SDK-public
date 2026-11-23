@@ -2,6 +2,7 @@ import java.util.Base64
 
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
@@ -21,14 +22,13 @@ android {
         applicationId = "ai.mubeen.mubeen_flutter_example"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdk = 24
         targetSdk = flutter.targetSdkVersion
-        // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
-        // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)
-        // You can force using the value of versionCode by specifying the `-P force-version-code-ignoring-abi=true`
-        // flag during build.
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        // Literals: Flutter 3.22 exposes these as methods (flutter.versionCode()), newer
+        // Flutter as properties (flutter.versionCode), so no one form builds on every Flutter
+        // this legacy build supports. The harness never ships to a store.
+        versionCode = 1
+        versionName = "1.0"
     }
 
     sourceSets {

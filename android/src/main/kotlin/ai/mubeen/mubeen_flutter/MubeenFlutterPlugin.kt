@@ -552,9 +552,9 @@ internal object ErrorRelay : ErrorCallback {
      * - `NOT_INITIALIZED`: `not_configured`.
      *
      * `rejected` and `rate_limited` are never produced on Android: 1.7.3 reports no HTTP status
-     * to the callback at all (a non-2xx is logged and queued, UploadManager.kt:215-230) and its
-     * client-side rate limiter returns silently. Map them here once the SDK reports status codes
-     * as structured data.
+     * to the callback at all (a non-2xx is logged and queued, UploadManager.kt:215-230), and it
+     * does not report throttling rapid repeat uploads either. Map them here once the SDK reports
+     * status codes as structured data.
      */
     internal fun mapCode(error: DeviceIntelError): String = when (error.type) {
         ErrorType.NOT_INITIALIZED -> "not_configured"

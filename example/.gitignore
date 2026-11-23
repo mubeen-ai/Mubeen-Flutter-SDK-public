@@ -28,6 +28,8 @@ migrate_working_dir/
 **/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins-dependencies
+# Written by older Flutter versions (3.22 does), which the legacy build supports.
+.flutter-plugins
 .pub-cache/
 .pub/
 /build/

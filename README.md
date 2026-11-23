@@ -17,39 +17,64 @@ dependencies:
   mubeen_flutter:
     git:
       url: https://github.com/mubeen-ai/Mubeen-Flutter-SDK-public.git
-      ref: v0.1.6
+      ref: v0.1.7-flutter3.22
 ```
 
 This package is not published to pub.dev. Pin the exact tag: `flutter pub get` then fetches
 that release and nothing newer, so an upgrade is always a deliberate `ref` change.
 
+### This is the legacy build (Flutter 3.22 to 3.43)
+
+This README describes `v0.1.7-flutter3.22`, the build of 0.1.7 for apps on Flutter 3.22 to
+3.43. On Flutter 3.44 or newer, use `ref: v0.1.7` instead and follow that tag's README:
+on 3.44 or newer `flutter pub get` refuses this build. It has the same Dart API and native
+SDKs as `v0.1.7`. What differs is the build setup: the pubspec constraints
+(`flutter: '>=3.22.0 <3.44.0'`, Dart 3.4 up to but not including 3.12), and on Android the plugin applies the Kotlin Gradle plugin itself and
+compiles against Android SDK 34.
+
 **Minimum platform versions**: Android 7.0 (API 24), iOS 15.0.
 
-**Minimum toolchain**: Flutter 3.44.0 (Dart 3.12.0). iOS needs Xcode 16 or newer - the SDK
-binary needs a recent Swift compiler (tested with Xcode 26). On Android the plugin uses Flutter's
-built-in Kotlin: it does not apply the Kotlin Gradle plugin itself, so Flutter's "plugins that
-apply Kotlin Gradle Plugin (KGP)" warning never names it, and your app needs no Kotlin
-changes for it. Tested on Flutter 3.44.0 and on current stable, for Android, for iOS
-through CocoaPods (with Swift Package Manager turned off), and for iOS through Swift Package
-Manager.
-An existing app that kept a pre-AGP-9 Android toolchain also works without enabling built-in
-Kotlin: tested on Flutter 3.44.0 with AGP 8.13.2 / Gradle 8.14.3 / Kotlin 2.3.0 and with
-AGP 8.6.0 / Gradle 8.7 / Kotlin 2.0.21 (the oldest Flutter 3.44 accepts), as long as the app
-declares the Kotlin Gradle plugin, as Flutter's app template does.
+**Minimum toolchain**:
+
+- **Flutter 3.22.0 or newer, below 3.44** (Dart 3.4.0).
+- **Android `minSdk`**: apps created by Flutter 3.22 to 3.32 start with `minSdk` 21 (Flutter
+  3.35 and newer start at 24), and the build fails with a manifest merger error until you
+  raise it. In
+  `android/app/build.gradle(.kts)`, set `minSdk = 24` or higher (`minSdk 24` in Groovy).
+- **Android**: the plugin applies the Kotlin Gradle plugin itself, so your app needs Kotlin
+  Gradle plugin 1.8.0 or newer. Apps created by Flutter 3.22 to 3.24.1 pin 1.7.10: raise the
+  `org.jetbrains.kotlin.android` version in `android/settings.gradle` to 1.8.0 or newer.
+  Apps created by Flutter 3.24.2 or newer pin 1.8.22 or newer.
+- **iOS**: the SDK binary needs Xcode 16 or newer, and Flutter fixed its Xcode 16 issues
+  in 3.24. Use Flutter 3.24.5 or newer for iOS: earlier 3.24 patches were rejected by App
+  Store review for reasons unrelated to this plugin. On these Flutter versions CocoaPods is
+  the default way iOS plugins are pulled in, so follow [iOS with CocoaPods](#ios-with-cocoapods).
+
+**Tested on**:
+
+- Flutter 3.22.3: analyze, tests, a new app from that version's own template built as a
+  release APK, the Android end-to-end suite, and a minified release build that uploaded a
+  fingerprint.
+- Android phones: on real Android 10 and 17 phones it configured, uploads were answered
+  200, and the device id survived a relaunch.
+- iOS: a new Flutter 3.24.5 app using CocoaPods built a release app with the plugin in CI
+  (Xcode 26.6); on real iPhones (iOS 15 and 27) it configured, sent fingerprints accepted by
+  the server, and kept its device id across a relaunch.
+
+**Example app**: its Android project builds on Flutter 3.22 to 3.41 (it targets Gradle 8.7
+and Android Gradle Plugin 8.6). Its iOS project needs Flutter 3.44 or newer, so on older
+Flutter build the example for Android only.
 
 ### iOS deployment target
 
-The plugin needs an iOS deployment target of 15.0 or higher whichever way your app pulls in
-iOS plugins. With SwiftPM (Flutter's default) that is the only change: set
-the Runner target's Minimum Deployments to iOS 15.0 (step 2 below). SwiftPM downloads the
-native SDK binary and verifies its checksum itself.
+The plugin needs an iOS deployment target of 15.0 or higher. Set it in two places, as
+described in the next section.
 
 ### iOS with CocoaPods
 
-Your app uses CocoaPods when you turned Swift Package Manager off (it is on by default on
-every Flutter this plugin supports) with
-`flutter config --no-enable-swift-package-manager`. The native SDK binary ships inside the
-plugin, so `pod install` downloads nothing extra. You need two changes, both for iOS 15.0:
+On Flutter 3.22 to 3.43 your app uses CocoaPods unless you turned Swift Package Manager on,
+so there is nothing to switch. The native SDK binary ships inside the plugin, so
+`pod install` downloads nothing extra. You need two changes, both for iOS 15.0:
 
 1. In `ios/Podfile`, uncomment the platform line and set it to 15.0:
 
@@ -83,8 +108,7 @@ your key, but a truncated device id can still appear.
 
 Old app versions keep sending the key they were built with until users update. When you
 switch keys (for example, moving region), ship the new key in an app update and keep the
-old one active in the dashboard until adoption has caught up; revoking it earlier silently
-stops fingerprints from those installs.
+old one active in the dashboard until adoption has caught up.
 
 ### Release builds (R8)
 
@@ -167,8 +191,8 @@ through its `Future` for:
   through `linkage` instead, and listing one of those names in `allowedCustomKeys` itself
   is also rejected;
 - a `custom` value that contains an email address, or a phone number in international form
-  (`+` or `00`, then 8-15 digits, the first not zero, with spaces/dots/dashes/parentheses allowed
-  between them);
+  (`+` or `00`, then 8-15 digits, the first not zero, with spaces, dots, dashes, underscores, commas or
+  parentheses allowed between them);
   fullwidth characters, Arabic-Indic and Persian digits and percent-escapes such as `%40`
   are folded before matching, and invisible format characters (zero-width spaces, soft
   hyphens) are removed. A `00` directly after identifier punctuation (`-`, `_`, `.`, `,`,
@@ -318,7 +342,8 @@ missing error as "nothing failed yet," not as "delivered."
 
 More limits worth knowing before you go looking for a bug that isn't one:
 
-- The Android SDK drops uploads past **5 per minute**. Dropped uploads are silent.
+- The Android SDK throttles rapid repeat uploads without reporting it; send at meaningful
+  events only, such as login and checkout.
 - The Android SDK's retry queue is in memory only. If the process is killed, queued
   uploads are gone - they do not survive a restart.
 - A failed upload costs **two** requests, not one: the retry queue is processed
@@ -451,6 +476,7 @@ as personal data for label purposes, not as anonymized. If you turn on
 
 | Plugin version | Android (`ai.mubeen:deviceintel-lib`) | iOS (`MubeenDeviceSDK`) |
 |---|---|---|
+| 0.1.7 | 1.7.3 | 2.0.0 |
 | 0.1.6 | 1.7.3 | 2.0.0 |
 | 0.1.5 | 1.7.3 | 2.0.0 |
 | 0.1.4 | 1.7.3 | 2.0.0 |
@@ -461,12 +487,9 @@ as personal data for label purposes, not as anonymized. If you turn on
 
 ## Troubleshooting
 
-**Getting `429` while testing.** The mobile ingestion endpoints rate-limit per source IP,
-and every device behind the same NAT'd IP shares that limit. If
-your whole team is testing from one office network, you're all sharing one limit - this
-is very often not an SDK bug, it's several phones on the same WiFi hitting the same limit.
-Spread test devices across networks, or test sequentially, before assuming something is
-broken.
+**Getting `429` while testing.** Many test devices on one network can be throttled
+together. Spread test devices across networks, or test sequentially, before assuming
+something is broken.
 
 **Getting an `already_configured` error.** Neither native SDK reports a second
 `configure()` call: `MB_DeviceIntel.init()` on Android returns early and keeps the first
@@ -481,10 +504,9 @@ keeping stale config. Changing `allowedCustomKeys` counts as a different value t
 part of the comparison even though it never crosses the platform channel. A full app
 restart (not just hot restart) always clears it.
 
-**Getting a `401`.** Use one key of type
-`public - JS client side` for both platforms; the Android ingestion endpoint rejects any
-other key type with a `401` your app never sees. A key also belongs to
-one region: used against another region's `endpoint` it gets a `401`, which iOS throws from
+**Getting a `401`.** Use a key of type `public - JS client side` on both platforms; other
+key types are not supported and on Android fail with a `401` your app never sees. A key
+also belongs to one region: used against another region's `endpoint` it gets a `401`, which iOS throws from
 `sendFingerprint()` as `MubeenAuthError` and Android swallows silently.
 
 **`configure()` throws `ArgumentError` for an `endpoint` that used to work.** `endpoint`
@@ -530,7 +552,7 @@ is tracked so it can be fixed upstream; this plugin cannot fix them from the wra
   `enableBehavioralSignals`, declare that data yourself as described in "Privacy and store
   compliance" above; Xcode's aggregated privacy report will not do it for you.**
 - **A burst of `sendFingerprint()` calls launches one full collection per call on Android.** There is no de-duplication or coalescing yet; each call runs its own
-  10-25 s-on-a-slow-device collection concurrently. Call it at most once per meaningful
+  collection concurrently, which takes seconds on a slow device. Call it at most once per meaningful
   event (login, checkout), not on every screen view or tap.
 - **`logLevel` below `debug` does not fully silence the Android SDK's own logger.** A few of the SDK's internal log lines (upload status, a truncated device id)
   are unconditional in `deviceintel-lib` 1.7.3 regardless of the level you pass. Nothing at

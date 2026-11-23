@@ -3,7 +3,9 @@ Copyright (c) 2026 Mubeen AI. Licensed under the Mubeen SDK License (see LICENSE
 
 Bundled in this repository:
 
-- ios/Frameworks/MubeenDeviceSDK.xcframework - Mubeen AI. Covered by LICENSE.
+- ios/Frameworks/MubeenDeviceSDK.xcframework - Mubeen AI. Covered by LICENSE. Used by
+  CocoaPods builds. Swift Package Manager builds download the same binary (checksum
+  verified) from https://github.com/mubeen-ai/Mubeen-IOS-SDK-public at build time.
 
 Resolved by your build at build time, not bundled here, and licensed by their owners under
 their own terms:

@@ -1,18 +1,22 @@
 name: mubeen_flutter
 description: "Mubeen device intelligence for Flutter: device fingerprinting and persistent device identity on Android and iOS."
-version: 0.1.6
+version: 0.1.7+flutter3.22
 
 # This package is distributed as a git dependency, not through pub.dev. `publish_to: none` makes
 # `dart pub publish` refuse, so it cannot reach pub.dev by accident.
 publish_to: none
 
 environment:
-  # Floor proven in CI on Flutter 3.44.0: analyze, tests, a fresh 3.44.0 app building this
-  # plugin into a debug APK, and an iOS build through CocoaPods.
-  # Dart 3.12.0 is what Flutter 3.44.0 ships. 3.44 is the minimum Flutter's built-in Kotlin
-  # migration for plugins requires (android/build.gradle.kts applies no Kotlin Gradle plugin).
-  sdk: ^3.12.0
-  flutter: '>=3.44.0'
+  # Legacy build for apps on Flutter older than 3.44 (README, "This is the legacy build").
+  # Floor proven locally on Flutter 3.22: analyze, tests, and a fresh app from that Flutter's
+  # own template building this plugin into a release APK. Dart 3.4.0 is what Flutter 3.22.0
+  # ships. Flutter 3.19 is below the floor: its Gradle plugin only wires plugins that have
+  # android/build.gradle, not build.gradle.kts.
+  # <3.12.0 is the real guard: Flutter 3.44 ships Dart 3.12, so on 3.44+ `pub get` refuses
+  # this build and points the app at the main build (`v0.1.7`). Pub enforces only the lower
+  # bound of the flutter constraint below, so its upper bound is documentation.
+  sdk: '>=3.4.0 <3.12.0'
+  flutter: '>=3.22.0 <3.44.0'
 
 dependencies:
   flutter:
@@ -21,8 +25,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
-  pigeon: ^29.0.1
+  # 4.x resolves on Dart 3.4 (the floor); 6.x needs Dart 3.8.
+  flutter_lints: '>=4.0.0 <7.0.0'
+  # Range, not ^29: pub picks 29.x on new Dart and 22.x on Dart 3.4/3.5 (Flutter 3.22/3.24),
+  # so `flutter pub get` works on the floor. Codegen only; regenerate with 29.x.
+  pigeon: '>=22.7.2 <30.0.0'
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

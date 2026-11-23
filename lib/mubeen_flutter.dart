@@ -201,11 +201,11 @@ class MubeenConfig {
   /// Publishable key. Must not be empty or whitespace-only: [Mubeen.configure]
   /// throws [ArgumentError] for that on both platforms.
   ///
-  /// Must be a `public - JS client side` key, on both platforms. With any other
-  /// key type every Android upload is
-  /// rejected with a 401 **that the app never sees**: the Android SDK reports no
-  /// HTTP status, so nothing reaches [Mubeen.errors] or the returned Future.
-  /// Only server-side verification, or logcat at [MubeenLogLevel.debug], shows it.
+  /// Use a key of type `public - JS client side`, on both platforms. Other key
+  /// types are not supported, and on Android they fail with a 401 **that the app
+  /// never sees**: the Android SDK reports no HTTP status, so nothing reaches
+  /// [Mubeen.errors] or the returned Future. Only server-side verification, or
+  /// logcat at [MubeenLogLevel.debug], shows it.
   ///
   /// The key must also come from the same region as [endpoint]: a key issued in
   /// one region is rejected with 401 by another region's ingestion host.
@@ -430,8 +430,8 @@ class MubeenUnsupportedError extends MubeenError {
 
 /// [Mubeen.configure] was called a second time with different values.
 ///
-/// Both native SDKs early-return when already initialized, so the second config
-/// would be silently ignored. This is thrown instead. It bites hardest under
+/// Neither native SDK reports a repeat call (Android keeps the first config, iOS
+/// silently re-configures), so the plugin throws this instead. It bites hardest under
 /// Flutter hot restart, which restarts Dart but not the host process: your Dart
 /// state looks unconfigured while the native SDK is still holding the old
 /// config. Full restart the app after changing config.
@@ -454,8 +454,8 @@ class MubeenInvalidConfigError extends MubeenError {
     : super('invalid_config', message);
 }
 
-/// The backend rejected the request — wrong key type, revoked key, or a payload
-/// the ingestion service refused.
+/// The backend rejected the request: a key it does not accept (for example, one
+/// from another region) or a payload the ingestion service refused.
 ///
 /// iOS only in practice: the Android SDK (`deviceintel-lib` 1.7.3) reports no
 /// HTTP rejection to the plugin at all, so a 401 there is silent. Do not read
@@ -851,11 +851,11 @@ class Mubeen implements MubeenFlutterApi {
 
   /// Async failures the native SDKs report outside a method call.
   ///
-  /// **This is the only signal that an upload actually failed.** [sendFingerprint]
-  /// completing means accepted-or-queued, never delivered: on Android
-  /// `uploadFingerprint()` is fire-and-forget, and on iOS a queued retry reports
-  /// success immediately. If you do not listen here, a 100% failure rate looks
-  /// identical to success on both platforms.
+  /// [sendFingerprint] completing means accepted-or-queued, never delivered: on
+  /// Android `uploadFingerprint()` is fire-and-forget, and on iOS a queued retry
+  /// reports success immediately. On Android this is the only signal that an
+  /// upload failed; on iOS terminal rejections throw from [sendFingerprint] and
+  /// only 429/5xx arrive here.
   ///
   /// Broadcast, so late listeners are fine, but events emitted before you
   /// subscribe are gone — subscribe in the same frame you call [configure].

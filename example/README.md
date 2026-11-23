@@ -1,8 +1,8 @@
 # mubeen_flutter example
 
 A manual test harness for the `mubeen_flutter` plugin. It configures the plugin from a
-button, so you can try different keys and options without restarting the app. It is not a
-reference integration: for how to wire the plugin into your own app, follow the quick start
+button, so you can pick a key and options at run time; changing them after configuring needs
+a full app restart. It is not a reference integration: for how to wire the plugin into your own app, follow the quick start
 in the top-level README.
 
 ## Run it
