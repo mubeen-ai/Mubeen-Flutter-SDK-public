@@ -266,8 +266,8 @@ class MbConfig {
     required this.ios,
   });
 
-  /// Publishable key. Must be a `public - JS client side` key: the Android ingestion
-  /// endpoint rejects any other key type with a 401 the app never sees.
+  /// Publishable key of type `public - JS client side`. Other key types are not
+  /// supported, and on Android they fail with a 401 the app never sees.
   String apiKey;
 
   /// Base URL of the ingestion service. Null uses the default ingestion host. The Dart

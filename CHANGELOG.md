@@ -1,3 +1,14 @@
+## 0.1.7
+
+Released 2026-11-23.
+
+- README: simplified "Changing your API key". No code changes.
+- `SECURITY.md`: report security issues privately, not in public issues.
+- `NOTICE`: Swift Package Manager builds download the iOS SDK binary from
+  `mubeen-ai/Mubeen-IOS-SDK-public`.
+- Package docs reworded (`MubeenAuthError` and other dartdoc). No code changes.
+- README: a pointer for apps on Flutter older than 3.44, and reworded troubleshooting notes.
+
 ## 0.1.6
 
 Released 2026-10-21.

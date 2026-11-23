@@ -17,11 +17,14 @@ dependencies:
   mubeen_flutter:
     git:
       url: https://github.com/mubeen-ai/Mubeen-Flutter-SDK-public.git
-      ref: v0.1.6
+      ref: v0.1.7
 ```
 
 This package is not published to pub.dev. Pin the exact tag: `flutter pub get` then fetches
 that release and nothing newer, so an upgrade is always a deliberate `ref` change.
+
+**Flutter older than 3.44**: apps on Flutter 3.22 to 3.43 use `ref: v0.1.7-flutter3.22`
+instead. It has the same Dart API; see that tag's README for its build setup.
 
 **Minimum platform versions**: Android 7.0 (API 24), iOS 15.0.
 
@@ -83,8 +86,7 @@ your key, but a truncated device id can still appear.
 
 Old app versions keep sending the key they were built with until users update. When you
 switch keys (for example, moving region), ship the new key in an app update and keep the
-old one active in the dashboard until adoption has caught up; revoking it earlier silently
-stops fingerprints from those installs.
+old one active in the dashboard until adoption has caught up.
 
 ### Release builds (R8)
 
@@ -167,8 +169,8 @@ through its `Future` for:
   through `linkage` instead, and listing one of those names in `allowedCustomKeys` itself
   is also rejected;
 - a `custom` value that contains an email address, or a phone number in international form
-  (`+` or `00`, then 8-15 digits, the first not zero, with spaces/dots/dashes/parentheses allowed
-  between them);
+  (`+` or `00`, then 8-15 digits, the first not zero, with spaces, dots, dashes, underscores, commas or
+  parentheses allowed between them);
   fullwidth characters, Arabic-Indic and Persian digits and percent-escapes such as `%40`
   are folded before matching, and invisible format characters (zero-width spaces, soft
   hyphens) are removed. A `00` directly after identifier punctuation (`-`, `_`, `.`, `,`,
@@ -318,7 +320,8 @@ missing error as "nothing failed yet," not as "delivered."
 
 More limits worth knowing before you go looking for a bug that isn't one:
 
-- The Android SDK drops uploads past **5 per minute**. Dropped uploads are silent.
+- The Android SDK throttles rapid repeat uploads without reporting it; send at meaningful
+  events only, such as login and checkout.
 - The Android SDK's retry queue is in memory only. If the process is killed, queued
   uploads are gone - they do not survive a restart.
 - A failed upload costs **two** requests, not one: the retry queue is processed
@@ -451,6 +454,7 @@ as personal data for label purposes, not as anonymized. If you turn on
 
 | Plugin version | Android (`ai.mubeen:deviceintel-lib`) | iOS (`MubeenDeviceSDK`) |
 |---|---|---|
+| 0.1.7 | 1.7.3 | 2.0.0 |
 | 0.1.6 | 1.7.3 | 2.0.0 |
 | 0.1.5 | 1.7.3 | 2.0.0 |
 | 0.1.4 | 1.7.3 | 2.0.0 |
@@ -461,12 +465,9 @@ as personal data for label purposes, not as anonymized. If you turn on
 
 ## Troubleshooting
 
-**Getting `429` while testing.** The mobile ingestion endpoints rate-limit per source IP,
-and every device behind the same NAT'd IP shares that limit. If
-your whole team is testing from one office network, you're all sharing one limit - this
-is very often not an SDK bug, it's several phones on the same WiFi hitting the same limit.
-Spread test devices across networks, or test sequentially, before assuming something is
-broken.
+**Getting `429` while testing.** Many test devices on one network can be throttled
+together. Spread test devices across networks, or test sequentially, before assuming
+something is broken.
 
 **Getting an `already_configured` error.** Neither native SDK reports a second
 `configure()` call: `MB_DeviceIntel.init()` on Android returns early and keeps the first
@@ -481,10 +482,9 @@ keeping stale config. Changing `allowedCustomKeys` counts as a different value t
 part of the comparison even though it never crosses the platform channel. A full app
 restart (not just hot restart) always clears it.
 
-**Getting a `401`.** Use one key of type
-`public - JS client side` for both platforms; the Android ingestion endpoint rejects any
-other key type with a `401` your app never sees. A key also belongs to
-one region: used against another region's `endpoint` it gets a `401`, which iOS throws from
+**Getting a `401`.** Use a key of type `public - JS client side` on both platforms; other
+key types are not supported and on Android fail with a `401` your app never sees. A key
+also belongs to one region: used against another region's `endpoint` it gets a `401`, which iOS throws from
 `sendFingerprint()` as `MubeenAuthError` and Android swallows silently.
 
 **`configure()` throws `ArgumentError` for an `endpoint` that used to work.** `endpoint`
@@ -530,7 +530,7 @@ is tracked so it can be fixed upstream; this plugin cannot fix them from the wra
   `enableBehavioralSignals`, declare that data yourself as described in "Privacy and store
   compliance" above; Xcode's aggregated privacy report will not do it for you.**
 - **A burst of `sendFingerprint()` calls launches one full collection per call on Android.** There is no de-duplication or coalescing yet; each call runs its own
-  10-25 s-on-a-slow-device collection concurrently. Call it at most once per meaningful
+  collection concurrently, which takes seconds on a slow device. Call it at most once per meaningful
   event (login, checkout), not on every screen view or tap.
 - **`logLevel` below `debug` does not fully silence the Android SDK's own logger.** A few of the SDK's internal log lines (upload status, a truncated device id)
   are unconditional in `deviceintel-lib` 1.7.3 regardless of the level you pass. Nothing at

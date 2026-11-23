@@ -323,8 +323,8 @@ struct MbIosOptions: Hashable, CustomStringConvertible {
 ///
 /// Generated class from Pigeon that represents data sent in messages.
 struct MbConfig: Hashable, CustomStringConvertible {
-  /// Publishable key. Must be a `public - JS client side` key: the Android ingestion
-  /// endpoint rejects any other key type with a 401 the app never sees.
+  /// Publishable key of type `public - JS client side`. Other key types are not
+  /// supported, and on Android they fail with a 401 the app never sees.
   var apiKey: String
   /// Base URL of the ingestion service. Null uses the default ingestion host. The Dart
   /// facade has already rejected an empty, relative or non-https value (http is allowed
