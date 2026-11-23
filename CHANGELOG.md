@@ -1,3 +1,18 @@
+## 0.1.8-flutter3.22
+
+Released 2026-11-23.
+
+- Legacy build of 0.1.8 for apps on Flutter 3.22 to 3.43, tagged `v0.1.8-flutter3.22`:
+  same Dart API and native SDKs as `v0.1.8`. On Flutter 3.44 or newer use `v0.1.8`.
+
+## 0.1.8
+
+Released 2026-11-23.
+
+- Android: `sendFingerprint()` with `linkage` or `custom` no longer delivers a
+  `MubeenUnsupportedError` warning on `Mubeen.instance.errors`. They are still not sent on
+  Android; check `capabilities.linkage`.
+
 ## 0.1.7-flutter3.22
 
 Released 2026-11-23.

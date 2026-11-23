@@ -18,7 +18,6 @@ import kotlinx.coroutines.withContext
 import org.xmlpull.v1.XmlPullParser
 import java.io.IOException
 import java.util.concurrent.CopyOnWriteArrayList
-import java.util.concurrent.atomic.AtomicBoolean
 
 /**
  * Android implementation of the `mubeen_flutter` Pigeon contract.
@@ -95,24 +94,11 @@ class MubeenFlutterPlugin : FlutterPlugin, MubeenHostApi {
 
     override suspend fun sendFingerprint(request: MbFingerprintRequest): Unit = onIo {
         requireConfigured()
-        if ((request.linkage != null || !request.custom.isNullOrEmpty()) &&
-            linkageDropWarned.compareAndSet(false, true)
-        ) {
-            // deviceintel-lib 1.7.3's upload payload is built entirely from collectors
-            // (MB_DeviceIntel.collectFingerprint, MB_DeviceIntel.kt:341+); there is no setter for
-            // caller-supplied linkage or custom fields. They are accepted so client code is the
-            // same on both platforms, dropped here, and the fingerprint is uploaded without them.
-            // Dropping is reported once per process on the error stream, the same channel as the
-            // advertising id warning, so it is visible without failing the call.
-            ErrorRelay.emit(
-                MbError(
-                    code = "unsupported",
-                    message = "linkage/custom were not sent: deviceintel-lib 1.7.3 on Android " +
-                        "has no field for them. The fingerprint was uploaded without them. " +
-                        "Check capabilities.linkage."
-                )
-            )
-        }
+        // deviceintel-lib 1.7.3's upload payload is built entirely from collectors
+        // (MB_DeviceIntel.collectFingerprint, MB_DeviceIntel.kt:341+); there is no setter for
+        // caller-supplied linkage or custom fields. They are accepted so client code is the
+        // same on both platforms and dropped here without a warning; the fingerprint is
+        // uploaded without them. capabilities().linkage = false is how an app can tell.
         // Fire-and-forget by design: uploadFingerprint() returns immediately and reports real
         // outcomes through MubeenFlutterApi.onError.
         MB_DeviceIntel.uploadFingerprint()
@@ -466,12 +452,6 @@ class MubeenFlutterPlugin : FlutterPlugin, MubeenHostApi {
         @Volatile
         internal var appliedConfig: MbConfig? = null
 
-        /**
-         * Whether the "linkage/custom were not sent" warning has been emitted. Process-scoped so
-         * a second engine does not repeat it: the limitation belongs to the linked SDK.
-         */
-        private val linkageDropWarned = AtomicBoolean(false)
-
         /** Test seam: the SDK singleton and this field both outlive a single test. */
         internal fun resetConfigStateForTesting() {
             appliedConfig = null
@@ -479,7 +459,6 @@ class MubeenFlutterPlugin : FlutterPlugin, MubeenHostApi {
             // for the rest of the JVM. Leaving it would make the first test written for the
             // other branch pass or fail depending on what ran before it.
             backupRulesCache = null
-            linkageDropWarned.set(false)
         }
     }
 }

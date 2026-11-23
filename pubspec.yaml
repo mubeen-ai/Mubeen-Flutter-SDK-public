@@ -1,6 +1,6 @@
 name: mubeen_flutter
 description: "Mubeen device intelligence for Flutter: device fingerprinting and persistent device identity on Android and iOS."
-version: 0.1.7+flutter3.22
+version: 0.1.8+flutter3.22
 
 # This package is distributed as a git dependency, not through pub.dev. `publish_to: none` makes
 # `dart pub publish` refuse, so it cannot reach pub.dev by accident.
@@ -13,7 +13,7 @@ environment:
   # ships. Flutter 3.19 is below the floor: its Gradle plugin only wires plugins that have
   # android/build.gradle, not build.gradle.kts.
   # <3.12.0 is the real guard: Flutter 3.44 ships Dart 3.12, so on 3.44+ `pub get` refuses
-  # this build and points the app at the main build (`v0.1.7`). Pub enforces only the lower
+  # this build and points the app at the main build (`v0.1.8`). Pub enforces only the lower
   # bound of the flutter constraint below, so its upper bound is documentation.
   sdk: '>=3.4.0 <3.12.0'
   flutter: '>=3.22.0 <3.44.0'

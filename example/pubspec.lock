@@ -160,7 +160,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.1.7+flutter3.22"
+    version: "0.1.8+flutter3.22"
   path:
     dependency: transitive
     description:
