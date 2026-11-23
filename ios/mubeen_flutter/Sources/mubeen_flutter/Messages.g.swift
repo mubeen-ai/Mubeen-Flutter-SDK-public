@@ -439,7 +439,7 @@ struct MbLinkage: Hashable, CustomStringConvertible {
 /// Generated class from Pigeon that represents data sent in messages.
 struct MbFingerprintRequest: Hashable, CustomStringConvertible {
   /// Sent on iOS. On Android, `deviceintel-lib` 1.7.3 has no field for it, so it is
-  /// accepted and dropped, with a one-time `unsupported` warning on onError.
+  /// accepted and silently dropped.
   var linkage: MbLinkage? = nil
   /// Non-identifying extras. Same platform limitation as [linkage].
   var custom: [String: String]? = nil

@@ -473,7 +473,7 @@ data class MbLinkage (
 data class MbFingerprintRequest (
   /**
    * Sent on iOS. On Android, `deviceintel-lib` 1.7.3 has no field for it, so it is
-   * accepted and dropped, with a one-time `unsupported` warning on onError.
+   * accepted and silently dropped.
    */
   val linkage: MbLinkage? = null,
   /** Non-identifying extras. Same platform limitation as [linkage]. */

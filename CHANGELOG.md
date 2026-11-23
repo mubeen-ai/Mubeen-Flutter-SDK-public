@@ -1,3 +1,11 @@
+## 0.1.8
+
+Released 2026-11-23.
+
+- Android: `sendFingerprint()` with `linkage` or `custom` no longer delivers a
+  `MubeenUnsupportedError` warning on `Mubeen.instance.errors`. They are still not sent on
+  Android; check `capabilities.linkage`.
+
 ## 0.1.7
 
 Released 2026-11-23.

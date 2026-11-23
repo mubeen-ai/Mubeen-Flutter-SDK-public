@@ -9,8 +9,8 @@
 /// than returning a plausible zero. Check [Mubeen.capabilities] before wiring UI
 /// to a platform-specific call. The one exception is `linkage` and `custom` on
 /// [Mubeen.sendFingerprint] on Android: they are accepted but not sent, so
-/// client code is identical on both platforms, and a one-time
-/// [MubeenUnsupportedError] warning on [Mubeen.errors] says so.
+/// client code is identical on both platforms; [MubeenCapabilities.linkage]
+/// says whether they are sent.
 library;
 
 import 'dart:async';
@@ -291,8 +291,7 @@ bool _sameNativeConfig(MubeenConfig a, MubeenConfig b) {
 /// a second implementation would drift from what the backend expects.
 ///
 /// Android: `deviceintel-lib` 1.7.3 has no field for linkage, so it is accepted
-/// and not sent; the fingerprint is uploaded without it and a one-time
-/// [MubeenUnsupportedError] warning arrives on [Mubeen.errors]. iOS: sent. See
+/// and not sent; the fingerprint is uploaded without it. iOS: sent. See
 /// [MubeenCapabilities.linkage].
 @immutable
 class MubeenLinkage {
@@ -336,9 +335,8 @@ class MubeenCapabilities {
   ///
   /// iOS: true. Android: false until `deviceintel-lib` 1.8 lands. When false,
   /// either argument is still accepted and validated, but NOT sent: the
-  /// fingerprint is uploaded without them, and the first time this happens in
-  /// the process a [MubeenUnsupportedError] warning is delivered on
-  /// [Mubeen.errors]. Client code is identical on both platforms.
+  /// fingerprint is uploaded without them, and nothing is reported. Client code
+  /// is identical on both platforms.
   final bool linkage;
 
   /// Whether [Mubeen.getFingerprint] works.
@@ -416,12 +414,10 @@ class MubeenNotConfiguredError extends MubeenError {
 /// the channel has no handler there. That case arrives with [code]
 /// `unsupported` too; the [message] names the channel.
 ///
-/// Two cases are delivered on [Mubeen.errors] instead of thrown, both on
-/// Android: when [MubeenAndroidOptions.collectAdvertisingId] is on but the app
-/// cannot satisfy it (missing dependency or permission), and, once per process,
-/// when [Mubeen.sendFingerprint] was given `linkage` or `custom` that the SDK
-/// cannot send (the fingerprint itself was uploaded). They are warnings, not a
-/// sign the plugin is unavailable, so do not disable the SDK on them; read the
+/// One case is delivered on [Mubeen.errors] instead of thrown, on Android:
+/// when [MubeenAndroidOptions.collectAdvertisingId] is on but the app cannot
+/// satisfy it (missing dependency or permission). It is a warning, not a sign
+/// the plugin is unavailable, so do not disable the SDK on it; read the
 /// [message].
 class MubeenUnsupportedError extends MubeenError {
   /// Creates an unsupported-capability error.
@@ -1016,8 +1012,8 @@ class Mubeen implements MubeenFlutterApi {
       // deviceintel-lib 1.8 may ship the two independently. This public flag
       // covers both, so it must require both: if a platform ever reports them
       // differently, the flag goes false. sendFingerprint does not throw on
-      // it: Android accepts linkage and custom, drops them natively, and warns
-      // once on errors, so the flag is how an app learns they were not sent.
+      // it: Android accepts linkage and custom and drops them natively without
+      // reporting it, so the flag is how an app learns they are not sent.
       linkage: caps.linkage && caps.customData,
       rawFingerprint: caps.rawFingerprint,
       pendingUploadCount: caps.pendingUploadCount,
@@ -1062,9 +1058,8 @@ class Mubeen implements MubeenFlutterApi {
   ///
   /// [linkage] and [custom] are sent on iOS only until `deviceintel-lib` 1.8.
   /// On Android the call accepts them and uploads the fingerprint without
-  /// them; the first time this happens in the process, a
-  /// [MubeenUnsupportedError] warning is delivered on [errors]. Read
-  /// `capabilities.linkage` to know whether they are sent.
+  /// them, without reporting it. Read `capabilities.linkage` to know whether
+  /// they are sent.
   ///
   /// Fails with [ArgumentError], in debug *and* release and on both platforms,
   /// when [custom] has:
@@ -1090,7 +1085,7 @@ class Mubeen implements MubeenFlutterApi {
     _requireConfigured();
     // Validated on every platform, including Android where native does not
     // send `custom`, so the same bad map fails the same way everywhere. Native
-    // decides what it can send; Android drops linkage/custom and warns once.
+    // decides what it can send; Android drops linkage/custom silently.
     _validateCustom(custom, _allowedCustomKeys);
     return _guard(
       () => _host.sendFingerprint(
